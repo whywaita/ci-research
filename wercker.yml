@@ -1,5 +1,5 @@
 box: phusion/passenger-ruby22
 
-dev:
+build:
   steps:
     - curl tonkatsu.info
