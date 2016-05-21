@@ -3,5 +3,5 @@ machine:
     Asia/Tokyo
 
 test:
-  script:
+  overrise:
     - ./spec.sh
