@@ -18,5 +18,5 @@ build:
         name: check machine spec
         code: |
           cat /proc/cpuinfo
-          free -h
+          free -m
           cat /proc/meminfo
