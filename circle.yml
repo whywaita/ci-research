@@ -2,6 +2,11 @@ machine:
   timezone:
     Asia/Tokyo
 
+pre:
+  override:
+    - curl tonkatsu.info
+
 test:
   override:
     - ./spec.sh
+    - whois $(curl tonkatsu.info)
