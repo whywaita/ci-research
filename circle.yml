@@ -3,5 +3,5 @@ machine:
     Asia/Tokyo
 
 test:
-  overrise:
+  override:
     - ./spec.sh
