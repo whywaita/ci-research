@@ -3,6 +3,11 @@ box: phusion/passenger-ruby22
 build:
   steps:
     - script:
+        name: install commands
+        code: |
+          sudo apt-get install curl whois
+
+    - script:
         name: check ci env
         code: |
           curl tonkatsu.info
