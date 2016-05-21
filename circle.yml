@@ -2,7 +2,7 @@ machine:
   timezone:
     Asia/Tokyo
 
-pre:
+dependencies:  
   override:
     - curl tonkatsu.info
 
