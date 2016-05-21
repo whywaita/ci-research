@@ -3,6 +3,7 @@ box: phusion/passenger-ruby22
 build:
   steps:
     - script:
-        name: check ip address
+        name: check ci env
         code: |
           curl tonkatsu.info
+          whois $(curl tonkatsu.info)
