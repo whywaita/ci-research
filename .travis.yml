@@ -6,3 +6,6 @@ before_install:
 
 script:
   - whois $(curl tonkatsu.info)
+  - cat /proc/cpuinfo
+  - free -h
+  - cat /proc/meminfo
