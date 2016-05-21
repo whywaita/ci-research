@@ -4,7 +4,7 @@ I want to check CI env
 
 - [Travis CI](https://travis-ci.org/whywaita/ci-research) 
 
-[![Build Status](https://travis-ci.org/whywaita/ci-research.svg)]
+[![Build Status](https://travis-ci.org/whywaita/ci-research.svg)](https://travis-ci.org/whywaita/ci-research)
 
 - [Circle CI](https://circleci.com/gh/whywaita/ci-research) 
 
