@@ -2,7 +2,7 @@ sudo: required
 language: ruby
 
 before_install:
-  - apt-get install whois curl
+  - sudo apt-get install whois curl
 
 script:
   - curl tonkatsu.info
