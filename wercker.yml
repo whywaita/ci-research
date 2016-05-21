@@ -9,7 +9,14 @@ build:
           sudo apt-get install -y curl whois
 
     - script:
-        name: check ci env
+        name: check ci env network
         code: |
           curl tonkatsu.info
           whois $(curl tonkatsu.info)
+
+    - script:
+        name: check machine spec
+        code: |
+          cat /proc/cpuinfo
+          free -h
+          cat /proc/meminfo
