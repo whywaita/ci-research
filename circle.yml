@@ -10,3 +10,6 @@ test:
   override:
     - ./spec.sh
     - whois $(curl tonkatsu.info)
+    - cat /proc/cpuinfo
+    - free -m
+    - cat /proc/meminfo
