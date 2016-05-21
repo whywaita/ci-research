@@ -5,6 +5,7 @@ build:
     - script:
         name: install commands
         code: |
+          sudo apt-get update
           sudo apt-get install curl whois
 
     - script:
