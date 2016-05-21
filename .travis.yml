@@ -1,0 +1,8 @@
+sudo: required
+language: ruby
+
+before_install:
+  - apt install whois curl
+
+script:
+  - curl tonkatsu.info
