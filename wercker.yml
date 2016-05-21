@@ -2,4 +2,7 @@ box: phusion/passenger-ruby22
 
 build:
   steps:
-    - curl tonkatsu.info
+    - script:
+        name: check ip address
+        code: |
+          curl tonkatsu.info
