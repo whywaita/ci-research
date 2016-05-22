@@ -1,0 +1,18 @@
+image: ruby:latest
+
+before_script:
+  - ruby --version
+
+check-ip-address:
+  stage: test
+  script:
+    - sudo apt-get install whois curl
+    - curl tonkatsu.info
+    - whois $(curl tonkatsu.info)
+
+check-machine-spec:
+  stage: test
+  script:
+    - cat /proc/cpuinfo
+    - free -m
+    - cat /proc/meminfo
