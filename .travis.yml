@@ -5,6 +5,7 @@ before_install:
   - sudo apt-get install whois curl jq
 
 script:
+  - curl ipinfo.io
   - whois $(curl ipinfo.io | jq .ip | tr -d '"')
   - cat /proc/cpuinfo
   - free -m
