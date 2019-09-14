@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  network:
+    machine: true
+    steps:
+      - checkout
+      - ip:
+        name: check network
+        command: |
+          curl ipinfo.io
+          whois $(curl ipinfo.io | jq .ip)
+
+  machine_spec:
+    machine: true
+    steps:
+      - checkout
+      - cat /proc/cpuinfo
+      - free -m
+      - cat /proc/meminfo
