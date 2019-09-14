@@ -6,9 +6,9 @@ before_script:
 check-ip-address:
   stage: test
   script:
-    - sudo apt-get install whois curl
-    - curl tonkatsu.info
-    - whois $(curl tonkatsu.info)
+    - sudo apt-get install whois curl jq
+    - curl ipinfo.io
+    - whois $(curl ipinfo.io | jq .ip)
 
 check-machine-spec:
   stage: test

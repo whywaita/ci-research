@@ -1,0 +1,14 @@
+image: ubuntu
+
+install:
+- apt update -y -qq
+- apt install curl whois jq
+
+check_network:
+- curl ipinfo.io
+- whois $(curl ipinfo.io | jq .ip)
+
+check_machine:
+- cat /proc/cpuinfo
+- free -m
+- cat /proc/meminfo

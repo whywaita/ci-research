@@ -2,10 +2,10 @@ sudo: required
 language: ruby
 
 before_install:
-  - sudo apt-get install whois curl
+  - sudo apt-get install whois curl jq
 
 script:
-  - whois $(curl tonkatsu.info)
+  - whois $(curl ipinfo.io | jq .ip)
   - cat /proc/cpuinfo
   - free -m
   - cat /proc/meminfo

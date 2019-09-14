@@ -6,13 +6,13 @@ build:
         name: install commands
         code: |
           sudo apt-get update
-          sudo apt-get install -y curl whois
+          sudo apt-get install -y curl whois jq
 
     - script:
         name: check ci env network
         code: |
-          curl tonkatsu.info
-          whois $(curl tonkatsu.info)
+          curl ipinfo.io
+          whois $(curl ipinfo.io | jq .ip)
 
     - script:
         name: check machine spec
