@@ -14,6 +14,15 @@ jobs:
     machine: true
     steps:
       - checkout
-      - cat /proc/cpuinfo
-      - free -m
-      - cat /proc/meminfo
+      - machine:
+        command: |
+          cat /proc/cpuinfo
+          free -m
+          cat /proc/meminfo
+
+workflows:
+  version: 2
+  check:
+    jobs:
+      - network
+      - machine_spec
