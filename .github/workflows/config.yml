@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: check network environment
       run: |
-        apt install -y curl jq whois
+        sudo apt install -y curl jq whois
         curl ipinfo.io
         whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
