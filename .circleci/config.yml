@@ -7,6 +7,7 @@ jobs:
       - run:
           name: check network
           command: |
+            sudo apt install -y -qq curl jq whois
             curl ipinfo.io
             whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
