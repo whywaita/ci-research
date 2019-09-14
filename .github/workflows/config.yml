@@ -6,12 +6,16 @@ jobs:
   check_network:
     runs-on: ubuntu-latest
     steps:
-    - curl ipinfo.io
-    - whois $(curl ipinfo.io | jq .ip | tr -d '"')
+    - name: check network environment
+      run: |
+        curl ipinfo.io
+        whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
   check_machine:
     runs-on: ubuntu-latest
     steps:
-    - cat /proc/cpuinfo
-    - free -m
-    - cat /proc/meminfo
+    - name: check home machine environment
+      run: |
+        cat /proc/cpuinfo
+        free -m
+        cat /proc/meminfo
