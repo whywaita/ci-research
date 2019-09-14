@@ -12,7 +12,7 @@ build:
         name: check ci env network
         code: |
           curl ipinfo.io
-          whois $(curl ipinfo.io | jq .ip)
+          whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
     - script:
         name: check machine spec

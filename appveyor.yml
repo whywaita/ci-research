@@ -6,7 +6,7 @@ install:
 
 check_network:
 - curl ipinfo.io
-- whois $(curl ipinfo.io | jq .ip)
+- whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
 check_machine:
 - cat /proc/cpuinfo
