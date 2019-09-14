@@ -4,21 +4,22 @@ jobs:
     machine: true
     steps:
       - checkout
-      - ip:
-        name: check network
-        command: |
-          curl ipinfo.io
-          whois $(curl ipinfo.io | jq .ip | tr -d '"')
+      - run:
+          name: check network
+          command: |
+            curl ipinfo.io
+            whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
   machine_spec:
     machine: true
     steps:
       - checkout
-      - machine:
-        command: |
-          cat /proc/cpuinfo
-          free -m
-          cat /proc/meminfo
+      - run:
+          name: check machine
+          command: |
+            cat /proc/cpuinfo
+            free -m
+            cat /proc/meminfo
 
 workflows:
   version: 2
