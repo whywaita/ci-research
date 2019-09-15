@@ -1,0 +1,25 @@
+---
+kind: pipeline
+type: exec
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: install commands
+  commands:
+  - sudo apt update -y -qq
+  - sudo apt install -y curl whois jq
+
+- name: check ci env network
+  commands:
+  - curl ipinfo.io
+  - whois $(curl ipinfo.io | jq .ip | tr -d '"')
+
+- name: check machine spec
+  commands:
+  - cat /proc/cpuinfo
+  - free -m
+  - cat /proc/meminfo
