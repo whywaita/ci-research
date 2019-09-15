@@ -21,3 +21,7 @@ I want to check CI env
 - [Codeship](https://codeship.com/projects/153474)
 
 [ ![Codeship Status for whywaita/ci-research](https://codeship.com/projects/60e21bf0-0172-0134-60cf-1a75d84bae9b/status?branch=master)](https://codeship.com/projects/153474)
+
+- [AppVeyour](https://ci.appveyor.com/project/whywaita/ci-research)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/ap5nmn1v1b8rqhi6?svg=true)](https://ci.appveyor.com/project/whywaita/ci-research)
