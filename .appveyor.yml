@@ -9,8 +9,8 @@ check_network:
 - whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
 check_machine:
-- sh: cat /proc/cpuinfo
-- sh: free -m
-- sh: cat /proc/meminfo
+- cat /proc/cpuinfo
+- free -m
+- cat /proc/meminfo
 
 build: off
