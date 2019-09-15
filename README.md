@@ -16,7 +16,7 @@ I want to check CI env
 
 - [Drone.io](https://drone.io/github.com/whywaita/ci-research)
 
-[![Build Status](https://drone.io/github.com/whywaita/ci-research/status.png)](https://drone.io/github.com/whywaita/ci-research/latest)
+[![Build Status](https://cloud.drone.io/api/badges/whywaita/ci-research/status.svg)](https://cloud.drone.io/whywaita/ci-research)
 
 - [Codeship](https://codeship.com/projects/153474)
 
