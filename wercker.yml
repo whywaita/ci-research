@@ -12,7 +12,7 @@ build:
         name: check ci env network
         code: |
           curl ipinfo.io
-          whois $(curl ipinfo.io | jq .ip | tr -d '"')
+          # whois $(curl ipinfo.io | jq .ip | tr -d '"')  # error: getaddrinfo(whois.arin.net): Servname not supported for ai_socktype
 
     - script:
         name: check machine spec
