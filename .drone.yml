@@ -11,8 +11,8 @@ steps:
 - name: install commands
   image: ubuntu:latest
   commands:
-  - sudo apt update -y -qq
-  - sudo apt install -y curl whois jq
+  - apt update -y -qq
+  - apt install -y curl whois jq
 
 - name: check ci env network
   image: ubuntu:latest
