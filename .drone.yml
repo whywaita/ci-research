@@ -7,16 +7,11 @@ platform:
   os: linux
   arch: amd64
 
-steps:
-- name: install commands
+- name: check ci env network
   image: ubuntu:latest
   commands:
   - apt update -y -qq
   - apt install -y curl whois jq
-
-- name: check ci env network
-  image: ubuntu:latest
-  commands:
   - curl ipinfo.io
   - whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
