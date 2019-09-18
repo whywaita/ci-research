@@ -14,7 +14,7 @@ steps:
   - apt update -y -qq
   - apt install -y curl whois jq
   - curl ipinfo.io
-  - whois $(curl ipinfo.io | jq .ip | tr -d '"')
+# - whois $(curl ipinfo.io | jq .ip | tr -d '"')  # getaddrinfo(whois.arin.net): Servname not supported for ai_socktype
 
 - name: check machine spec
   image: ubuntu:latest
