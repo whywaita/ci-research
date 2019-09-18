@@ -9,16 +9,19 @@ platform:
 
 steps:
 - name: install commands
+  image: ubuntu:latest
   commands:
   - sudo apt update -y -qq
   - sudo apt install -y curl whois jq
 
 - name: check ci env network
+  image: ubuntu:latest
   commands:
   - curl ipinfo.io
   - whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
 - name: check machine spec
+  image: ubuntu:latest
   commands:
   - cat /proc/cpuinfo
   - free -m
