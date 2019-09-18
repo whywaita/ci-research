@@ -12,3 +12,5 @@ check_machine:
 - cat /proc/cpuinfo
 - free -m
 - cat /proc/meminfo
+
+build: off

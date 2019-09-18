@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  network:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: check network
+          command: |
+            sudo apt update -y -qq
+            sudo apt install -y curl jq whois
+            curl ipinfo.io
+            whois $(curl ipinfo.io | jq .ip | tr -d '"')
+
+  machine_spec:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: check machine
+          command: |
+            cat /proc/cpuinfo
+            free -m
+            cat /proc/meminfo
+
+workflows:
+  version: 2
+  check:
+    jobs:
+      - network
+      - machine_spec
