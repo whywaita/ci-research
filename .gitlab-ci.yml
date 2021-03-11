@@ -6,7 +6,8 @@ before_script:
 check-ip-address:
   stage: test
   script:
-    - apt-get install whois curl jq
+    - apt-get update -y
+    - apt-get install -y whois curl jq
     - curl ipinfo.io
     - whois $(curl ipinfo.io | jq .ip | tr -d '"')
 
