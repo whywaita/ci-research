@@ -25,3 +25,7 @@ I want to check CI env
 - [AppVeyour](https://ci.appveyor.com/project/whywaita/ci-research)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ap5nmn1v1b8rqhi6?svg=true)](https://ci.appveyor.com/project/whywaita/ci-research)
+
+- [GitLab CI](https://gitlab.com/whywaita/ci-research)
+
+[![Build status](https://gitlab.com/whywaita/ci-research/badges/master/pipeline.svg)](https://gitlab.com/whywaita/ci-research/-/commits/master)
