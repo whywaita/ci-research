@@ -1,4 +1,4 @@
-box: phusion/passenger-ruby22
+box: phusion/passenger-full
 
 build:
   steps:
