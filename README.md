@@ -29,3 +29,7 @@ I want to check CI env
 - [GitLab CI](https://gitlab.com/whywaita/ci-research)
 
 [![Build status](https://gitlab.com/whywaita/ci-research/badges/master/pipeline.svg)](https://gitlab.com/whywaita/ci-research/-/commits/master)
+
+- [GitHub Actions](https://github.com/whywaita/ci-research/actions)
+
+[![CI](https://github.com/whywaita/ci-research/actions/workflows/config.yml/badge.svg)](https://github.com/whywaita/ci-research/actions/workflows/config.yml)
