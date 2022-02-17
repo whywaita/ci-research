@@ -23,9 +23,20 @@ jobs:
             free -m
             cat /proc/meminfo
 
+  machine_spec_mac:
+    macos:
+      xcode: 12.5.1
+    steps:
+      - checkout
+      - run:
+        name: check machine
+        command:
+          system_profiler SPHardwareDataType
+
 workflows:
   version: 2
   check:
     jobs:
       - network
       - machine_spec
+      - machine_spec_mac
