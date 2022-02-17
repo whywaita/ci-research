@@ -29,9 +29,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: check machine
-        command:
-          system_profiler SPHardwareDataType
+          name: check machine
+          command: | 
+            system_profiler SPHardwareDataType
 
 workflows:
   version: 2
